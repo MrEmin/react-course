@@ -29,11 +29,11 @@ const BookList = () => {
 }
 
 const EventExamples = () => {
-  const handleFormInput = (e) => {
+  /* const handleFormInput = (e) => {
     console.log(e.target)
     console.log(e.target.name)
     console.log(e.target.value)
-  }
+  } */
   const handleButtonClick = () => alert('handle button click')
 
   const handleFormSubmission = (e) => {
@@ -48,11 +48,11 @@ const EventExamples = () => {
         <input
           type='text'
           name='example'
-          onChange={handleFormInput}
+          onChange={(e) => console.log(e.target.value)}
           style={{ margin: '1rem 0' }}
         />
       </form>
-      <button onClick={handleButtonClick}>click me</button>
+      <button onClick={() => console.log('click me')}>click me</button>
     </section>
   )
 }
