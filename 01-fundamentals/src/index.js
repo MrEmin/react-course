@@ -33,12 +33,11 @@ const BookList = () => {
 }
 
 const Book = ({ img, title, author, getBook, id }) => {
-  const handleClick = () => getBook(id)
   return (
     <article className='book'>
       <img src={img} alt={title} />
       <h2>{title}</h2>
-      <button onClick={handleClick}>click me</button>
+      <button onClick={() => getBook(id)}>click me</button>
       <h4>{author}</h4>
     </article>
   )
