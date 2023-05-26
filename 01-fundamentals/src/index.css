@@ -65,3 +65,8 @@ body {
     background-color: #C45500;
     color: #fff;
 }
+
+.title {
+    margin: 4rem 0 0 2rem;
+    text-align: center;
+}
