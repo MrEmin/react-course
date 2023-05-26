@@ -1,14 +1,24 @@
+import img1 from './images/book-1.jpg'
+import img2 from './images/book-2.jpg'
+import img3 from './images/book-3.jpg'
+
 export const books = [
   {
     id: 1,
-    author: 'Dr. Seuss',
-    title: `Oh, the Places You'll Go!`,
-    img: './images/book-1.jpg',
+    author: 'Jordan Moore',
+    title: 'Interesting Facts For Curious Minds',
+    img: img1,
   },
   {
     id: 2,
     author: 'James Clear',
     title: 'Atomic Habits',
-    img: 'https://images-na.ssl-images-amazon.com/images/I/81bGKUa1e0L._AC_UL600_SR600,400_.jpg',
+    img: img2,
+  },
+  {
+    author: 'Stephen King',
+    title: 'Fairy Tale',
+    img: img3,
+    id: 3,
   },
 ]
