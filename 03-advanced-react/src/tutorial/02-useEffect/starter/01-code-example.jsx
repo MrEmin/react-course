@@ -7,7 +7,7 @@ const CodeExample = () => {
     console.log('Hello there')
 
     // be careful, you will have inifinite loop
-    setValue(value + 1)
+    /* setValue(value + 1) */
   }
 
   sayHello()
