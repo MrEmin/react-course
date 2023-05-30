@@ -1,7 +1,16 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
 const CodeExample = () => {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(0)
+
+  const sayHello = () => {
+    console.log('Hello there')
+
+    // be careful, you will have inifinite loop
+    setValue(value + 1)
+  }
+
+  sayHello()
 
   return (
     <div>
@@ -10,6 +19,6 @@ const CodeExample = () => {
         click me
       </button>
     </div>
-  );
-};
-export default CodeExample;
+  )
+}
+export default CodeExample
