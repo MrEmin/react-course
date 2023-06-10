@@ -1,12 +1,10 @@
-import { Test } from './Test'
-import Example from './tutorial/04-project-structure/starter/Example'
+import List from './tutorial/05-leverage-javascript/starter/List'
 
 function App() {
-  const handleChange = () => {}
   return (
     <div className='container'>
-      <Example />
-      <Test />
+      <h2>Leverage Javascript</h2>
+      <List />
     </div>
   )
 }
