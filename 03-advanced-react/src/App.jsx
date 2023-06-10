@@ -1,11 +1,12 @@
-import Navbar from './tutorial/04-project-structure/starter/Navbar'
-import { About, Home } from './tutorial/04-project-structure/starter/Pages'
+import { Test } from './Test'
+import Example from './tutorial/04-project-structure/starter/Example'
 
 function App() {
+  const handleChange = () => {}
   return (
     <div className='container'>
-      <Home />
-      <About />
+      <Example />
+      <Test />
     </div>
   )
 }
