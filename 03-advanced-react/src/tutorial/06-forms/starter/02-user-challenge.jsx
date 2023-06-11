@@ -14,9 +14,9 @@ const UsersChallenge = () => {
     setName('')
   }
 
-  const removeItem = (id) => {
-    const newUsers = users.filter((person) => person.id !== id)
-    setUsers(newUsers)
+  const removeUser = (id) => {
+    const updatedUsers = users.filter((person) => person.id !== id)
+    setUsers(updatedUsers)
   }
 
   return (
@@ -40,7 +40,7 @@ const UsersChallenge = () => {
           submit
         </button>
       </form>
-      <h2>Userss</h2>
+      <h2>Users</h2>
       {users.map((person) => {
         const { id, name } = person
         return (
@@ -49,7 +49,7 @@ const UsersChallenge = () => {
             <button
               type='button'
               className='btn'
-              onClick={() => removeItem(id)}
+              onClick={() => removeUser(id)}
             >
               remove
             </button>
