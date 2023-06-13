@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
-import useFetchPerson from './useFetchPerson'
+import useFetch from './useFetch'
 const url = 'https://api.github.com/users/QuincyLarson'
 
 const FetchData = () => {
-  const { user, isLoading, isError } = useFetchPerson(url)
+  const { data: user, isLoading, isError } = useFetch(url)
 
   // order matters
   // don't place user JSX before loading or error
