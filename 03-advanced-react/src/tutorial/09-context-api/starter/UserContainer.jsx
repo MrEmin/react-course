@@ -1,8 +1,17 @@
-const UserContainer = ({ user, logOut }) => {
+const UserContainer = ({ user, logout }) => {
+  console.log(user)
   return (
-    <div>
-      {!user.name ? <p>please login</p> : <h2>{user.name}</h2>}
-      <button onClick={() => logOut()}>Log Out</button>
+    <div className='user-container'>
+      {user ? (
+        <>
+          <p>Hello There, {user?.name?.toUpperCase()}</p>
+          <button className='btn' onClick={logout}>
+            Log Out
+          </button>
+        </>
+      ) : (
+        <p>please login</p>
+      )}
     </div>
   )
 }
