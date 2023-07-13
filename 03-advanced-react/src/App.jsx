@@ -1,4 +1,4 @@
-import Final from './tutorial/02-useEffect/starter/04-fetch-data'
+import Final from './tutorial/11-performance/starter/03-hooks'
 
 function App() {
   return (
