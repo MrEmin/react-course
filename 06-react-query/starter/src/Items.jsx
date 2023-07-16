@@ -3,10 +3,11 @@ import { useQuery } from '@tanstack/react-query'
 import customFetch from './utils'
 
 const Items = () => {
-  const { isLoading, data } = useQuery({
+  const { isLoading, data, error, isError } = useQuery({
     queryKey: ['tasks'],
     queryFn: async () => {
-      const { data } = await customFetch.get('/')
+      // sunucuda something diye bir yol olmadığı için hata alırız.
+      const { data } = await customFetch.get('/something')
       return data
     },
   })
@@ -14,6 +15,15 @@ const Items = () => {
   if (isLoading) {
     return <p style={{ marginTop: '1rem' }}>Loading...</p>
   }
+
+  if (isError) {
+    return <p style={{ marginTop: '1rem' }}>There was an error...</p>
+  }
+
+  /*   console.log(error)
+  if (error) {
+    return <p style={{ marginTop: '1rem' }}>{error.response.data}</p>
+  } */
 
   return (
     <div className='items'>
