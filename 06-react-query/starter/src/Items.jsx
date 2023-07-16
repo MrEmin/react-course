@@ -7,7 +7,7 @@ const Items = () => {
     queryKey: ['tasks'],
     queryFn: async () => {
       // sunucuda something diye bir yol olmadığı için hata alırız.
-      const { data } = await customFetch.get('/something')
+      const { data } = await customFetch.get('/')
       return data
     },
   })
