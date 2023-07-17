@@ -3,7 +3,7 @@ import customFetch from './utils'
 import { toast } from 'react-toastify'
 
 export const useFetchTasks = () => {
-  const { isLoading, data, error, isError } = useQuery({
+  const { isLoading, data, isError } = useQuery({
     queryKey: ['tasks'],
     queryFn: async () => {
       const { data } = await customFetch.get('/')
