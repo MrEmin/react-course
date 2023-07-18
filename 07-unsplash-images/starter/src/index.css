@@ -325,14 +325,13 @@ PROJECT CSS
 Toggle Container
 ========
 */
-
 .toggle-container {
   width: var(--view-width);
   max-width: var(--max-width);
-  padding: 1rem 0;
+  padding: 1rem;
   margin: 0 auto;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .dark-toggle {
@@ -355,8 +354,9 @@ Toggle Container
 Search Form
 ========
 */
+
 .title {
-  color: var(--primary-500);
+  color: var(--primary-500)
 }
 
 .search-form {
@@ -373,8 +373,6 @@ Search Form
   transition: var(--darkModeTransition);
   color: var(--textColor);
   border-radius: 0;
-
-  /* border-right: none; */
 }
 
 .search-form .btn {
@@ -401,7 +399,8 @@ Gallery
 }
 
 .image-container .img {
-  height: 10rem;
+  height: 14rem;
+  border-radius: var(--borderRadius);
 }
 
 @media (min-width: 768px) {
