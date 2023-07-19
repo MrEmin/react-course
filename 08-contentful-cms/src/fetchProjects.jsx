@@ -13,7 +13,10 @@ export const useFetchProjects = () => {
 
   const getData = async () => {
     try {
-      const response = await client.getEntries({ content_type: 'projects' })
+      const response = await client.getEntries({
+        content_type: 'projects',
+        order: 'sys.createdAt',
+      })
       console.log(response)
       const projects = response.items.map((item) => {
         const { title, url, image } = item.fields
