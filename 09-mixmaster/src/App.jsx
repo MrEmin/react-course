@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { loader as landingLoader } from './pages/Landing'
+import { loader as singleCocktailLoader } from './pages/Cocktail'
 
 import {
   About,
@@ -25,6 +26,8 @@ const router = createBrowserRouter([
       },
       {
         path: 'cocktail/:id',
+        errorElement: <SinglePageError />,
+        loader: singleCocktailLoader,
         element: <Cocktail />,
       },
       {
