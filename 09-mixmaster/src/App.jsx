@@ -29,16 +29,6 @@ const router = createBrowserRouter([
       {
         path: 'about',
         element: <About />,
-        children: [
-          {
-            index: true,
-            element: <h2>our company</h2>,
-          },
-          {
-            path: 'person',
-            element: <h2>John Doe</h2>,
-          },
-        ],
       },
     ],
   },
