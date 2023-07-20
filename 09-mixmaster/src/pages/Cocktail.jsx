@@ -1,4 +1,4 @@
-import { Link, useLoaderData } from 'react-router-dom'
+import { Link, useLoaderData, Navigate } from 'react-router-dom'
 import axios from 'axios'
 import Wrapper from '../assets/wrappers/CocktailPage'
 
@@ -13,6 +13,11 @@ export const loader = async ({ params }) => {
 
 const Cocktail = () => {
   const { id, data } = useLoaderData()
+
+  // if (!data) return <h2>something went wrong...</h2>
+
+  if (!data) return <Navigate to='/' />
+
   const singleDrink = data.drinks[0]
   const {
     strDrink: name,
